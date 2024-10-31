@@ -1,5 +1,6 @@
-import chess.pgn
 
+import chess
+import chess.pgn
 
 def tabla_de_tableros(posicion):
 
