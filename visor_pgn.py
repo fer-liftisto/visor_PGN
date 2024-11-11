@@ -99,10 +99,11 @@ def introduce_atras(jugada_fotograma, planilla):
             cuadro[casilla].configure(text=traduce('sn', jugada_fotograma[jugada][f][c]),
                                       font=('Helvetica', grande.get()),
                                       fg='blue' if jugada_fotograma[jugada][f][c].isupper() else 'black')
+    inicio = len(str(turno.get()))
     if turno.get() == 0:
         movimiento.config(text=f'{jugada}')
     else:
-        movimiento.config(text=f'{turno.get()//2}... {jugada}' if turno.get() % 2 == 0 else f'{turno.get()//2+1}. {jugada}')
+        movimiento.config(text=f'{turno.get()//2}... {jugada[inicio:]}' if turno.get() % 2 == 0 else f'{turno.get()//2+1}. {jugada[inicio:]}')
 
     
     

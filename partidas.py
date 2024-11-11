@@ -1,5 +1,4 @@
 
-from pgn_fen import *
 #PGN= 
 '''
 [Evento "Partida relámpago puntuada"]
@@ -48,29 +47,7 @@ PGN ='''
 
 '''
 
-'''para quitatr parentesis'''
 
-def quitar(PGN,caracter1,caracter2):
-    paren=''
-    aux = False
-    for i in PGN:
-        if i == caracter1:
-            aux=True
-        if aux:    
-            paren += i
-        if i == caracter2:
-            aux=False
-            PGN=PGN.replace(paren,'')
-            paren=''
-    return PGN
-    
 
 
     ############################
-if __name__ == '__main__':
-    print(dir(str))
-    PGN = quitar(PGN, '(', ')')
-    PGN = quitar(PGN, '{', '}')
-
-
-    print(PGN)
